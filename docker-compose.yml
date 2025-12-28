@@ -1,0 +1,20 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: mongo-androzoo
+    restart: always
+    ports:
+      - "27022:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+    volumes:
+      - mongo-androzoo:/data/db
+    networks:
+      - androzoo-network
+networks:
+  androzoo-network:
+    name: androzoo-network
+    external: true
+volumes:
+  mongo-androzoo:

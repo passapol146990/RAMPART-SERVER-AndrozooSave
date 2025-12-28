@@ -1,2 +1,11 @@
-# RAMPART-SERVER-AndrozooSave
-MSU Project API Server Androo SHA apk.
+To install dependencies:
+```sh
+bun install
+```
+
+To run:
+```sh
+bun run dev
+```
+
+open http://localhost:3000
